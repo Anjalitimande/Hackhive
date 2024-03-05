@@ -56,25 +56,10 @@
             <label for="feedback">Feedback:</label>
             <textarea id="feedback" name="feedback" rows="4" required></textarea>
 
-           <button type="button" onclick="submitFeedback()">Submit</button> 
-
+<a href="/submission.html"> <button type="button" onclick="submitFeedback()">Submit</button> </a>
         </form>
     </div>
-       <script >
-        function submitFeedback() {
-    var username = document.getElementById("name").value;
-    var password = document.getElementById("email").value;
 
-    
-    if (name.trim() === "" || email.trim() === "") {
-        alert("Name and Email are required!");
-        return false;
-    }
-  
-    window.location.href="/submission.html";
-        }
-        return false;
-        </script>
 
     <footer>
         <p>&copy; 2024 Startup Ayush Portal. All rights reserved.</p>
