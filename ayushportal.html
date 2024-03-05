@@ -34,8 +34,7 @@
         about sharing their knowledge.The Ayush Portal is a startup aimed at providing a platform for Ayurveda, Yoga & Naturopathy, Unani, Siddha, and Homeopathy (AYUSH) practitioners, enthusiasts, and seekers to connect, learn, and access resources related to alternative medicine and holistic wellness. The portal may offer services such as online consultations, 
              educational content, community forums, and access to Ayurvedic products</p>
     </section>
-
-    <section id="services">
+  <section id="services">
         <h2>Our Services</h2>
         <ul>
             <li>Ayurvedic Consultation</li>
@@ -45,21 +44,37 @@
             <li>Telemedicine platform</li>
         </ul>
     </section>
-
-    <section id="contact">
+    <div class="contact">
         <h2>Contact Us</h2>
         <p>If you have any questions or would like to inquire about our services, please feel free to contact us using the form below.</p>
-        <form>
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name"><br>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email"><br>
-            <label for="Any Question?">Any Question:</label><br>
-            <textarea id="Any Question?" name="Any Question?" rows="4" cols="50"></textarea><br>
-        <a href="/submission.html"> <input style="background-color: green; color:#000;" type="button" value="Submit"></a>
+        <form id="feedbackForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">E-mail:</label>
+            <textarea id="email" name="email" rows="1" required></textarea>
+
+            <label for="feedback">Feedback:</label>
+            <textarea id="feedback" name="feedback" rows="4" required></textarea>
+
+           <button type="button" onclick="submitFeedback()">Submit</button> 
 
         </form>
-    </section>
+    </div>
+       <script >
+        function submitFeedback() {
+    var username = document.getElementById("name").value;
+    var password = document.getElementById("email").value;
+
+    
+    if (name.trim() === "" || email.trim() === "") {
+        alert("Name and Email are required!");
+        return false;
+    }
+  
+    window.location.href="/submission.html";
+        }
+        return false;
+        </script>
 
     <footer>
         <p>&copy; 2024 Startup Ayush Portal. All rights reserved.</p>
